@@ -64,16 +64,19 @@
         // })
         // tom.say;
     //构造函数
-    function addPerson(name,age,say){
+    function addPerson(name,age){
         this.name = name;
         this.age = age;
-        this.say = say;
+        this.say = function(){
+            console.log(this.name)
+        };
     }
     //实例化对象
-    var tom = new addPerson('tom',19,function(){
-        console.log(this.name);
-    })
-    tom.say();
+    var tom = new addPerson('tom',19);
+    var jack = new addPerson('jack',20);
+    console.log(tom.name);
+    console.log(jack.name);
+    jack.name;
     </script>
 </body>
 </html>
