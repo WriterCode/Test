@@ -77,6 +77,11 @@
     console.log(tom.name);
     console.log(jack.name);
     jack.name;
+    //原型
+    addPerson.prototype.say = function(){
+        console.log(this);
+        //this 指向实例化对象
+    }
     </script>
 </body>
 </html>
