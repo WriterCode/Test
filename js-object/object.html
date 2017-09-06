@@ -51,18 +51,29 @@
     //工厂模式
     //有点复用率变高，
     //缺点，显性的创建对象，同样冗余
-        function creatPerson(name,age,say){
-            var person = {
-                name:name,
-                age:age,
-                say:say
-            }
-            return person;
-        }
-        var tom = creatPerson('aa',19,function(){
-            console.log(this.name)
-        })
-        tom.say;
+        // function creatPerson(name,age,say){
+        //     var person = {
+        //         name:name,
+        //         age:age,
+        //         say:say
+        //     }
+        //     return person;
+        // }
+        // var tom = creatPerson('aa',19,function(){
+        //     console.log(this.name)
+        // })
+        // tom.say;
+    //构造函数
+    function addPerson(name,age,say){
+        this.name = name;
+        this.age = age;
+        this.say = say;
+    }
+    //实例化对象
+    var tom = new addPerson('tom',19,function(){
+        console.log(this.name);
+    })
+    tom.say();
     </script>
 </body>
 </html>
